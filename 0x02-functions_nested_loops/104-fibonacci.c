@@ -45,8 +45,6 @@ int main(void)
 	printf("\n");
 	return (0);
 }
-
-
 _putchar.c
 
 #include "main.h"
