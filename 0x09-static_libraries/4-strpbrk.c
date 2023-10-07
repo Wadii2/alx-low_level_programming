@@ -1,31 +1,24 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- * _strpbrk - gets the length of a prefix substring.
- * @s: parameter
- * @accept: parameter
- * Return: char
+ * _strpbrk - fills memory with a constant byte.
+ * @s: first bytes of the memory
+ * @accept: constant byte b
+ * Return: pointer to the resulting string dests
  */
 char *_strpbrk(char *s, char *accept)
 {
-        int i;
-        int j;
-        int found;
+	int i, j;
 
-        i = 0;
-        while (s[i])
-        {
-                j = 0;
-                found = 0;
-                while (accept[j])
-                {
-                        if (s[i] == accept[j])
-                                found = 1;
-                        j++;
-                }
-                if (found == 1)
-                        return (s + i);
-                i++;
-        }
-        return (NULL);
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; accept[j] != '\0'; j++)
+		{
+			if (s[i] == accept[j])
+			{
+				return (s + i);
+			}
+		}
+	}
+	return ('\0');
 }

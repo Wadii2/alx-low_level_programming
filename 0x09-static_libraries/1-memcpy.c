@@ -1,20 +1,19 @@
 #include "main.h"
+
 /**
- * _memcpy - check the code
- *@dest: parametre
- *@src: parametre
- *@n: parametre
- * Return: Always 0.
+ * _memcpy - fills memory with a constant byte.
+ * @dest: first bytes of the memory
+ * @src: constant byte b
+ * @n:  bytes of the memory area pointed to by s
+ * Return: pointer to the resulting string dests
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-        unsigned int i;
+	unsigned int i;
 
-        i = 0;
-        while (i < n)
-        {
-                dest[i] = src[i];
-                i++;
-        }
-        return (dest);
+	for (i = 0; i < n; i++)
+	{
+		dest[i] = src[i];
+	}
+	return (dest);
 }
